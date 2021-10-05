@@ -7,8 +7,9 @@
 }
 
 .dynamicStates{
+  margin: 1rem;
   display: flex;
-  width: calc(100vw - 2rem);
+  width: calc(100vw - 6rem);
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -21,6 +22,7 @@
   justify-items: center;
   text-align: center;
 }
+
 
 .displayNames{
   display: flex;
@@ -39,12 +41,13 @@ table {
 
 table tr{
   line-height: 2rem;
+  height:1.8rem ;
 }
 
 table td{
   border: 1px solid coral;
   min-width: 12rem;
-  line-height: 2rem;
+  height: 1.8rem;
 }
 
 table tr:last-child{
@@ -55,6 +58,7 @@ table tr:last-child{
   margin: 0.5rem;
   border: 1px solid black;
   height: 2rem;
+  width: 12rem;
 }
 
 .deleteButton{

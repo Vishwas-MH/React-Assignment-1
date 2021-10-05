@@ -28,7 +28,7 @@ function App() {
     <div className="Container">
       <h2>Names List</h2>
       <div className="displayNames">
-        <table>
+        <table className="displayTable">
           <tbody>
             {inputList.length > 0 && inputList && inputList.map((name, index) =>
               <tr key={index}>
@@ -39,7 +39,7 @@ function App() {
           </tbody>
         </table>
       </div>
-      <div>
+      <div className="Section">
         {inputList.map((elem, i) => {
           return (
             <div key={i} className="dynamicStates">
@@ -49,10 +49,10 @@ function App() {
               <div>
                 <input type="text" className="inputBox" name="lastName" placeholder="Last Name Here" value={elem.lastName} onChange={e => inputChange(e, i)} />
               </div>
-              {inputList.length > 1 &&
-                <input type="button" className="deleteButton" value="delete" onClick={deleteInput} />
+              {inputList.length > 1 && (elem.lastName!=="" || elem.firstName!=="") &&
+                <input type="button" className="deleteButton" value="delete" onClick={() => deleteInput(i)} />
               }
-              {inputList.length - 1 === i &&
+              {inputList.length - 1 === i && (elem.lastName!=="" || elem.firstName!=="") &&
                 <input type="button" className="addButton" value="add" onClick={addInput} />
               }
             </div>
