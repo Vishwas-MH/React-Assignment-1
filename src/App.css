@@ -1,38 +1,72 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+
+.App{
+  padding: 1rem;
+}
+
+.dynamicStates{
+  display: flex;
+  width: calc(100vw - 2rem);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.Container{
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.displayNames{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid coral;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table tr{
+  line-height: 2rem;
+}
+
+table td{
+  border: 1px solid coral;
+  min-width: 12rem;
+  line-height: 2rem;
+}
+
+table tr:last-child{
+  border: none;
+}
+
+.inputBox{
+  margin: 0.5rem;
+  border: 1px solid black;
+  height: 2rem;
+}
+
+.deleteButton{
+  margin: 0.5rem;
+  height: 2rem;
+  border: 1px solid red;
+  background-color: lightcoral;
+}
+
+.addButton{
+  margin: 0.5rem;
+  height: 2rem;
+  border: 1px solid green;
+  background-color: lightgreen;
 }
